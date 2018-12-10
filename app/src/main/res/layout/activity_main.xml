@@ -54,24 +54,37 @@
             android:layout_margin="10dp"
             android:text="Username"/>
 
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:background="@color/colorPrimary"
-            android:text="Logout"
-            android:textStyle="bold" />
+
 
         <Button
             android:id="@+id/btn_quiz"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:background="@color/colorPrimary"
-            android:text="Quiz Menu"
+            android:text="Mulai Tes"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_latihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorPrimary"
+            android:text="Latihan Soal"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="Logout"
             android:textStyle="bold" />
     </LinearLayout>
 

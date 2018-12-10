@@ -13,7 +13,7 @@ import uts.eai.MainActivityQuestion;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_logout, btn_quiz;
+    Button btn_logout, btn_quiz, btn_latihan;
     TextView txt_id, txt_username;
     String id, username;
     SharedPreferences sharedpreferences;
@@ -62,11 +62,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent_2 = new Intent(MainActivity.this, MainActivityQuestion.class);
+                Intent intent_2 = new Intent(MainActivity.this, MainActivityTes.class);
                 finish();
                 startActivity(intent_2);
             }
         });
 
+        btn_latihan = (Button) findViewById(R.id.btn_latihan);
+        btn_latihan.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent_3 = new Intent(MainActivity.this, MainActivityLatihan.class);
+                finish();
+                startActivity(intent_3);
+            }
+        });
     }
+
+
 }

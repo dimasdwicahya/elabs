@@ -1,23 +1,17 @@
 package uts.eai;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 
+import uts.eai.elabs.MainActivity;
 import uts.eai.elabs.R;
 import uts.eai.elabs.adapter.AdapterQuestion;
 import uts.eai.elabs.app.AppController;
@@ -45,10 +39,6 @@ public class MainActivityQuestion extends AppCompatActivity implements SwipeRefr
     private static final String TAG = MainActivityQuestion.class.getSimpleName();
 
     private static String url_select 	 = Server.URL + "select_question.php";
-    private static String url_insert 	 = Server.URL + "insert.php";
-    private static String url_edit 	     = Server.URL + "edit.php";
-    private static String url_update 	 = Server.URL + "update.php";
-    private static String url_delete 	 = Server.URL + "delete.php";
 
     public static final String TAG_ID = "id";
     public static final String TAG_SOAL = "soal";
@@ -68,7 +58,7 @@ public class MainActivityQuestion extends AppCompatActivity implements SwipeRefr
 
 
         setContentView(R.layout.activity_main_question);
-//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 
 
         // menghubungkan variablel pada layout dan pada java
@@ -179,6 +169,11 @@ public class MainActivityQuestion extends AppCompatActivity implements SwipeRefr
 
         // menambah request ke request queue
         AppController.getInstance().addToRequestQueue(jArr);
+    }
+
+    public void onBackPressed() {
+        Intent startMain = new Intent(this, MainActivity.class);
+        startActivity(startMain);
     }
 
 
