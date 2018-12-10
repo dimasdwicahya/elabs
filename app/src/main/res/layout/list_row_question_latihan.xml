@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/soal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="SOAL"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/jawaban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="JAWABAN" />
+
+    <RadioGroup
+        android:id="@+id/rgJawaban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/opsi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opsi1" />
+
+        <RadioButton
+            android:id="@+id/opsi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opsi2" />
+
+        <RadioButton
+            android:id="@+id/opsi3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opsi3" />
+
+        <RadioButton
+            android:id="@+id/opsi4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opsi4" />
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
